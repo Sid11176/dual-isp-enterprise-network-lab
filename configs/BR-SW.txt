@@ -169,6 +169,11 @@ interface Vlan1
  no ip address
  shutdown
 !
+interface Vlan199
+ ip address 10.10.2.194 255.255.255.240
+!
+ip default-gateway 10.10.2.193
+!
 !
 !
 !

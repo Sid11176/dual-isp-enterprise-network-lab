@@ -26,7 +26,7 @@ Addressing is in [`ip-plan.md`](ip-plan.md), links and interfaces in [`topology.
 
 ## Success criteria
 
-- Every phase has a saved `.pkt`, exported configs and a `verification/` file.
+- Every phase has exported configs and a `verification/` file. The latest `.pkt` is kept in `pkt/`; earlier stages are recorded in `configs/`, `verification/` and the commit history.
 - Five core failover tests (01 to 05) ship with Tier 1; tests 06 and 07 are added after Phase 6. Each records baseline, fault, lost replies and recovery.
 - Six to eight incident reports follow one format and cite real captured output.
 - The README opens with the diagram and a results table, and lists known limitations honestly.

@@ -61,14 +61,16 @@ interface FastEthernet0/2
  spanning-tree bpduguard enable
 !
 interface FastEthernet0/3
- switchport access vlan 999
+ switchport access vlan 50
  switchport mode access
- shutdown
+ spanning-tree portfast
+ spanning-tree bpduguard enable
 !
 interface FastEthernet0/4
- switchport access vlan 999
+ switchport access vlan 50
  switchport mode access
- shutdown
+ spanning-tree portfast
+ spanning-tree bpduguard enable
 !
 interface FastEthernet0/5
  switchport access vlan 999
@@ -175,6 +177,7 @@ interface FastEthernet0/24
  channel-group 1 mode active
 !
 interface GigabitEthernet0/1
+ switchport trunk native vlan 998
  switchport trunk allowed vlan 10,20,30,40,50,99,998
  switchport mode trunk
 !

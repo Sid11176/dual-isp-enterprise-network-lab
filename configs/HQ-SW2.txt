@@ -176,6 +176,7 @@ interface FastEthernet0/24
  channel-group 1 mode active
 !
 interface GigabitEthernet0/1
+ switchport trunk native vlan 998
  switchport trunk allowed vlan 10,20,30,40,50,99,998
  switchport mode trunk
 !

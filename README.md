@@ -4,7 +4,7 @@ A dual-homed, two-site enterprise network built in Cisco Packet Tracer. An HQ an
 
 ![Topology](docs/images/topology.png)
 
-> **Status:** Phase 2 complete (27 Nov 2026). Phase 3 is next. Update the table below as each phase is finished.
+> **Status:** Phase 3 complete (28 Nov 2026). Phase 4 is next. Update the table below as each phase is finished.
 
 ## Project status
 
@@ -13,7 +13,7 @@ A dual-homed, two-site enterprise network built in Cisco Packet Tracer. An HQ an
 | 0 | IP plan, topology, design decisions, feature tests | Complete |
 | 1 | VLANs, trunks, LACP EtherChannel, RSTP | Complete |
 | 2 | HSRP gateways, OSPF | Complete |
-| 3 | ISP edge, eBGP, NAT, DHCP, DNS | Not started |
+| 3 | ISP edge, eBGP, NAT, DHCP, DNS | Complete |
 | 4 | SSH hardening, ACL policy, port security, syslog/NTP/TFTP | Not started |
 | 5 | Failover tests, incident reports, runbooks | Not started |
 | 6 | IPsec site-to-site VPN (HQ to branch) | Not started |
@@ -66,7 +66,7 @@ Test procedures and evidence: [`failover-tests/`](failover-tests/).
 ```
 .
 ├── docs/              architecture, IP plan, topology (draw.io + PNG), design decisions, feature tests
-├── pkt/               staged Packet Tracer files (v1 to v5)
+├── pkt/               latest Packet Tracer file (includes all earlier phases)
 ├── configs/           one saved config per device
 ├── verification/      show-command evidence per feature
 ├── failover-tests/    fault injection with measured recovery
@@ -77,15 +77,7 @@ Test procedures and evidence: [`failover-tests/`](failover-tests/).
 ## How to open the lab
 
 1. Install Cisco Packet Tracer (built with version 9.0.1.0858).
-2. Open the `.pkt` file in [`pkt/`](pkt/) for the stage you want to inspect:
-
-| File | Adds |
-|---|---|
-| `v1-layer2.pkt` | VLANs, trunks, EtherChannel, RSTP |
-| `v2-routing.pkt` | HSRP, OSPF |
-| `v3-bgp-dual-isp.pkt` | ISPs, BGP, NAT, DHCP, DNS |
-| `v4-security.pkt` | SSH, ACLs, port security |
-| `v5-vpn.pkt` | IPsec VPN (branch WLAN is added later if built) |
+2. Open the latest `.pkt` file in [`pkt/`](pkt/) (currently `v3-bgp-dual-isp.pkt`, Phase 3: ISPs, BGP, NAT, DHCP, DNS). It includes everything built in earlier phases. Each later phase replaces it with the updated file.
 
 3. Device configs are in [`configs/`](configs/) if you prefer reading to opening the lab.
 4. Credentials in published configs are placeholders only.
